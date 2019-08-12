@@ -43,7 +43,7 @@
         data-target="#ingModal"><!-- 거래진행중 버튼-->
         거래진행중
         </button>
-
+        <!-- btn info 는 버튼의 서식을 담당하고 btn -ing -contract 요런것들은 눌렀을때 무엇이 나오게 할지 정하는것-->
         <button class="btn btn-info btn-contract" 
         type="button" 
         data-toggle="modal" 
@@ -97,7 +97,7 @@
             <mark><button class="btn btn-info btn-examcontract"
               type="button"
               data-toggle="contractmodal"
-              data-target="#contractModal">
+              data-target="#contractModal"><!--서약서의 내용을 어떻게 썻는지 알수있게 모두가 볼수 있게-->
               서약서
           </div>
         </div>
@@ -173,7 +173,7 @@
                   <strong>서약서 PDF</strong><input type="file" class="form-control" id="contract"/><br/>
                   <strong>차사진 jpg</strong><input type="file" class="form-control" id="profile_pt" onchange="previewImage(this,'View_area')">
                   <div id='View_area' style='position:relative; width: 100px; height: 100px; color: black; border: 0px solid black; dispaly: inline; '></div><!--차사진 넣는 칸-->
-                  
+                  <!--혼자 연습했을때는 사진이 등록되었다 -->
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
