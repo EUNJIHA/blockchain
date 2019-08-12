@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>중 GO CAR</title>
+    <style>
+    p#a { font-size : 2.0em;}
+    </style>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +36,22 @@
         data-target="#registerModal"> <!-- 밑에 id와 같아야해! -->
         등록하기
         </button>
-        <h3 class="text-center">거래 현황</h3>
+        
+        <button class="btn btn-info btn-ing" 
+        type="button" 
+        data-toggle="modal" 
+        data-target="#ingModal"><!-- 거래진행중 버튼-->
+        거래진행중
+        </button>
+
+        <button class="btn btn-info btn-contract" 
+        type="button" 
+        data-toggle="modal" 
+        data-target="#contractModal"><!-- 예시계약서 버튼-->
+        예시계약서
+        </button>
+
+        <em><h3 class="text-center">거래 현황</h3></em>
         <hr/>
     </div>
       
@@ -50,20 +68,20 @@
             <h3 class="panel-title"></h3>
           </div>
           <div class="panel-body">
-            <img style="width: 100%;" src="">
+            <img style="width: 100%;" img src="" width="175" height="200">
             <br/> <br/>
-            <strong>아이디</strong>: <span class="id"></span><br/>
-            <strong>종류</strong>: <span class="kind1"></span><br/>
-            <strong>연식</strong>: <span class="year1"></span><br/>            
-            <strong>주행</strong>: <span class="distance1"></span><br/>
-            <strong>배기량</strong>: <span class="cc1"></span><br/>
-            <strong>변속</strong>: <span class="change1"></span><br/>
-            <strong>색상</strong>: <span class="color1"></span><br/>
-            <strong>연료</strong>: <span class="fuel1"></span><br/>
-            <strong>압류저당</strong>: <span class="y11"></span><br/>
-            <strong>사고유무</strong>: <span class="y21"></span><br/>
-            <strong>가격(ETH)</strong>: <span class="price"></span><br/><br/>
-            <button class="btn btn-info btn-buy"
+            <mark><strong>아이디</mark></strong>: <span class="id"></span><br/>
+            <mark><strong>종류</mark></strong>: <span class="kind1"></span><br/>
+            <mark><strong>연식</mark></strong>: <span class="year1"></span><br/>            
+            <mark><strong>주행</mark></strong>: <span class="distance1"></span><br/>
+            <mark><strong>배기량</mark></strong>: <span class="cc1"></span><br/>
+            <mark><strong>변속</mark></strong>: <span class="change1"></span><br/>
+            <mark><strong>색상</mark></strong>: <span class="color1"></span><br/>
+            <mark><strong>연료</mark></strong>: <span class="fuel1"></span><br/>
+            <mark><strong>압류저당</mark></strong>: <span class="y11"></span><br/>
+            <mark><strong>사고유무</mark></strong>: <span class="y21"></span><br/>
+            <mark><strong>가격(ETH)</mark></strong>: <span class="price"></span><br/><br/>
+            <mark><button class="btn btn-info btn-buy"
                     type="button"
                     data-toggle="modal"
                     data-target="#buyModal">
@@ -76,6 +94,11 @@
                     style="display: none;">
                     구입자 정보
             </button>
+            <mark><button class="btn btn-info btn-examcontract"
+              type="button"
+              data-toggle="contractmodal"
+              data-target="#contractModal">
+              서약서
           </div>
         </div>
       </div>
@@ -148,7 +171,9 @@
   
                   <strong>정비소 PDF</strong><input type="file" class="form-control" id="pdf"/><br/>
                   <strong>서약서 PDF</strong><input type="file" class="form-control" id="contract"/><br/>
-      
+                  <strong>차사진 jpg</strong><input type="file" class="form-control" id="profile_pt" onchange="previewImage(this,'View_area')">
+                  <div id='View_area' style='position:relative; width: 100px; height: 100px; color: black; border: 0px solid black; dispaly: inline; '></div><!--차사진 넣는 칸-->
+                  
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
